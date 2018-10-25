@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/FrontEndCapstone/Reviews/badge.svg?branch=coveralls)](https://coveralls.io/github/FrontEndCapstone/Reviews?branch=coveralls)
+
 # Project Name
 
 > Project description
