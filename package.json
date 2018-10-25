@@ -9,7 +9,8 @@
   },
   "scripts": {
     "test": "jest",
-    "go": "webpack-cli --watch & live-server --open=./client/public/index.html --port=3000"
+    "lint": "eslint ./",
+    "start": "webpack-cli --watch & live-server --open=./client/public/index.html --port=3000"
   },
   "dependencies": {
     "react": "^16.6.0",

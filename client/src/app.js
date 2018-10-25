@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import './app.css';
 
@@ -11,14 +11,10 @@ const Main = styled.div`
   padding: 0 10px;
 `;
 
-class App extends Component {
-  render() {
-    return (
-      <Main>
-        <h1> Hello, world?</h1>
-      </Main>
-    );
-  }
-}
+const App = () => (
+  <Main>
+    <h1> Hello, world?</h1>
+  </Main>
+);
 
 export default App;
