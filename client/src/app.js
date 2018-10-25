@@ -1,15 +1,24 @@
 import React, { Component } from 'react';
-import { hot } from 'react-hot-loader';
+import styled from 'styled-components';
 import './app.css';
+
+const Main = styled.div`
+  margin: 40px auto;
+  max-width: 650px;
+  line-height: 1.6;
+  font-size: 18px;
+  color: #444;
+  padding: 0 10px;
+`;
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <h1> Hello, world? Are you there? It's me, Mario. </h1>
-      </div>
+      <Main>
+        <h1> Hello, world?</h1>
+      </Main>
     );
   }
 }
 
-export default hot(module)(App);
+export default App;
