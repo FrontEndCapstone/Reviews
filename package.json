@@ -29,6 +29,7 @@
     "babel-loader": "^8.0.2",
     "babel-plugin-styled-components": "^1.8.0",
     "chai": "^4.2.0",
+    "coveralls": "^3.0.2",
     "css-loader": "^1.0.0",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
