@@ -13,7 +13,7 @@ const Main = styled.div`
 
 const App = () => (
   <Main>
-    <h1> Hello, world?</h1>
+    <h1>Hello, world?</h1>
   </Main>
 );
 
