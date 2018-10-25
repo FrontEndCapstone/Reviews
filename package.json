@@ -8,7 +8,7 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start": "webpack-dev-server --mode development",
+    "test": "jest",
     "go": "webpack-cli --watch & live-server --open=./client/public/index.html --port=3000"
   },
   "dependencies": {
