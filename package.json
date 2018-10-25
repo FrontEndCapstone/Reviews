@@ -13,6 +13,7 @@
     "start": "webpack-cli --watch & live-server --open=./client/public/index.html --port=3000"
   },
   "dependencies": {
+    "express": "^4.16.4",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-hot-loader": "^4.3.11",
@@ -44,6 +45,7 @@
     "jest": "^23.6.0",
     "prettier": "^1.14.3",
     "style-loader": "^0.23.0",
+    "supertest": "^3.3.0",
     "webpack": "^4.19.1",
     "webpack-cli": "^3.1.1",
     "webpack-dev-server": "^3.1.8"
