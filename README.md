@@ -1,41 +1,37 @@
 [![Coverage Status](https://coveralls.io/repos/github/FrontEndCapstone/Reviews/badge.svg?branch=coveralls)](https://coveralls.io/github/FrontEndCapstone/Reviews?branch=coveralls)
 
-# Project Name
+# Trailblazers Reviews
 
-> Project description
+> Trailblazers is a reimplementation of the REI CoOp site's product page.  This repo contains the "Reviews" component for that project, which fetches reviews from the database, displays them to the user via a React frontend, and allows the user to interact with those reviews.
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - [Proxy server for running all components](https://github.com/FrontEndCapstone/DanielSockwellProxyServer)
+  - [ProductDescription component](https://github.com/FrontEndCapstone/ProdcutDescription)
+  - [ProductDetails component](https://github.com/FrontEndCapstone/Product-Details)
+  - [ProductComparisons component](https://github.com/FrontEndCapstone/ProductComparisons)
 
 ## Table of Contents
 
-1. [Usage](#Usage)
 1. [Requirements](#requirements)
 1. [Development](#development)
 
-## Usage
-
-> Some usage instructions
-
 ## Requirements
 
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
 - Node 6.13.0
-- etc
 
 ## Development
+
+Development requires eslint (for code linting) and Jest (for testing), along with several plugins for each.  All dev dependencies are listed in the package.json file.
+
+Contributions are welcome, but please ensure that you add tests and that all tests pass.  A drop in coverage, failing tests, or linter errors will cause the build to fail and the contribution to require revision.
 
 ### Installing Dependencies
 
 From within the root directory:
 
 ```sh
-npm install -g webpack
+npm install -g webpack-cli
 npm install
 ```
 
