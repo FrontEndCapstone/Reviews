@@ -2,7 +2,7 @@ const { expect } = require('chai');
 const React = require('react');
 const { mount } = require('enzyme');
 
-const Test = React.createElement('div', null, 'React_test_div');
+const Test = <div>React_test_div</div>;
 
 it('should pass a truthy test', () => {
   expect(true).to.equal(true);
