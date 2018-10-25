@@ -8,9 +8,14 @@
     "node": ">=6.13.0"
   },
   "scripts": {
+<<<<<<< HEAD
     "test": "jest",
     "lint": "eslint ./",
     "start": "webpack-cli --watch & live-server --open=./client/public/index.html --port=3000"
+=======
+    "start": "webpack-dev-server --mode development",
+    "go": "webpack-cli --watch & live-server --open=./client/public/index.html --port=3000"
+>>>>>>> master
   },
   "dependencies": {
     "react": "^16.6.0",
@@ -23,12 +28,16 @@
     "@babel/core": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
+<<<<<<< HEAD
     "acorn": "^6.0.2",
     "ajv": "^6.5.4",
+=======
+>>>>>>> master
     "babel-core": "^7.0.0-bridge.0",
     "babel-loader": "^8.0.2",
     "babel-plugin-styled-components": "^1.8.0",
     "chai": "^4.2.0",
+<<<<<<< HEAD
     "coveralls": "^3.0.2",
     "css-loader": "^1.0.0",
     "enzyme": "^3.7.0",
@@ -43,6 +52,13 @@
     "eslint-plugin-react": "^7.11.1",
     "jest": "^23.6.0",
     "prettier": "^1.14.3",
+=======
+    "css-loader": "^1.0.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "jest": "^23.6.0",
+>>>>>>> master
     "style-loader": "^0.23.0",
     "webpack": "^4.19.1",
     "webpack-cli": "^3.1.1",
