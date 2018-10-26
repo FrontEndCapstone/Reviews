@@ -4,11 +4,11 @@ node_js:
 services:
   - postgresql
 addons:
-  postgresql: "10.5"
+  postgresql: "10"
   apt:
     packages:
-    - postgresql-10.5
-    - postgresql-client-10.5
+    - postgresql-10
+    - postgresql-client-10
 cache:
   directories:
     - "node_modules"
