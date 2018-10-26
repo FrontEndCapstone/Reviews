@@ -13,8 +13,8 @@ describe('Reviews table', () => {
 
     pool.query('SELECT * FROM reviews', (err, res) => {
       expect(res.rowCount).to.be.above(500);
-      done();
       pool.end();
+      done();
     });
   });
 
@@ -27,8 +27,8 @@ describe('Reviews table', () => {
         const reviewIds = [];
         res.rows.forEach(row => reviewIds.push(row.review_id));
         expect(res.rowCount).to.be.above(500);
-        done();
         pool.end();
+        done();
       },
     );
   });
@@ -43,8 +43,8 @@ describe('Reviews table', () => {
       expect(reviewIds.size).to.be.below(101);
       expect(reviewIds.has(99)).to.equal(true);
       expect(reviewIds.has(100)).to.equal(false);
-      done();
       pool.end();
+      done();
     });
   });
 
@@ -53,6 +53,7 @@ describe('Reviews table', () => {
 
     pool.query('SELECT body FROM reviews WHERE id=5', (err, res) => {
       expect(res.rows[0].body.length).to.be.above(100);
+      pool.end();
       done();
     });
   });

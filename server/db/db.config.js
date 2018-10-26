@@ -12,21 +12,27 @@ const createQueryStr = `
   );`;
 
 const initReviewsTable = () => {
-  db.connect((connectionErr, client, done) => {
-    client.query('BEGIN', err => {
-      client.query('DROP TABLE reviews');
-      client.query(createQueryStr, (err, res) => {
+  db.connect((connectionErr, client) => {
+    client
+      .query('BEGIN')
+      .then(() => {
+        client.query('DROP TABLE reviews');
+      })
+      .then(() => {
+        client.query(createQueryStr);
+      })
+      .then(() => {
         for (let i = 1; i < 100; i++) {
           if (Math.random() < 0.9 && i < 100) {
             i--;
           }
           const insertQuery = {
             text: `
-INSERT INTO reviews (
-  review_id, rating, reviewer, title, body, recommend, helpful, unhelpful
-) VALUES (
-     $1,       $2,      $3,      $4,   $5,    $6,        $7,       $8
-)`,
+  INSERT INTO reviews (
+    review_id, rating, reviewer, title, body, recommend, helpful, unhelpful
+  ) VALUES (
+       $1,       $2,      $3,      $4,   $5,    $6,        $7,       $8
+  )`,
             values: [
               i,
               faker.random.number({ max: 3, min: 1 }) +
@@ -39,20 +45,15 @@ INSERT INTO reviews (
               faker.random.number(22),
             ],
           };
-          client.query(insertQuery.text, insertQuery.values, (err, res) => {
-            // console.log('i: ', i);
+          client.query(insertQuery.text, insertQuery.values, () => {
             if (i === 99) {
-              client.query('COMMIT', err => {
-                if (err) {
-                  console.error('Error committing transaction', err.stack);
-                }
-                done();
+              client.query('COMMIT', () => {
+                client.end();
               });
             }
           });
         }
       });
-    });
   });
 };
 
