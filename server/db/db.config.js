@@ -5,7 +5,7 @@ const db = new Pool({ database: 'trailblazers_reviews' });
 
 const createQueryStr = `
   CREATE TABLE reviews (
-    id int GENERATED always AS identity, review_id int, rating int,
+    id serial, review_id int, rating int,
     reviewer varchar(255), title varchar(255), body text,
     recommend boolean, helpful int, unhelpful int,
     PRIMARY KEY (id)
