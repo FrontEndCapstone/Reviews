@@ -9,7 +9,7 @@ beforeAll(() => {
 
 describe('Reviews table', () => {
   it('should have at least 900 rows', done => {
-    const pool = new Pool({ database: 'trailblazers-reviews' });
+    const pool = new Pool({ database: 'trailblazers_reviews' });
 
     pool.query('SELECT * FROM reviews', (err, res) => {
       expect(res.rowCount).to.be.above(500);
@@ -19,7 +19,7 @@ describe('Reviews table', () => {
   });
 
   it('should have the right columns', done => {
-    const pool = new Pool({ database: 'trailblazers-reviews' });
+    const pool = new Pool({ database: 'trailblazers_reviews' });
 
     pool.query(
       'SELECT review_id, rating, reviewer, title, body, recommend, helpful, unhelpful FROM reviews',
@@ -34,7 +34,7 @@ describe('Reviews table', () => {
   });
 
   it('should have reviews for most items', done => {
-    const pool = new Pool({ database: 'trailblazers-reviews' });
+    const pool = new Pool({ database: 'trailblazers_reviews' });
 
     pool.query('SELECT review_id FROM reviews', (err, res) => {
       const reviewIds = new Set();
@@ -49,7 +49,7 @@ describe('Reviews table', () => {
   });
 
   it('should have reasonably long review bodies', done => {
-    const pool = new Pool({ database: 'trailblazers-reviews' });
+    const pool = new Pool({ database: 'trailblazers_reviews' });
 
     pool.query('SELECT body FROM reviews WHERE id=5', (err, res) => {
       expect(res.rows[0].body.length).to.be.above(100);
