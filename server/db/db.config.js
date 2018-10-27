@@ -50,6 +50,7 @@ const initReviewsTable = () => {
               if (i === 99) {
                 client.query('COMMIT', () => {
                   client.end();
+                  res(true);
                 });
               }
             });
