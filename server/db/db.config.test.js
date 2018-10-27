@@ -4,7 +4,7 @@ import { Pool } from 'pg';
 const setupDb = require('./db.config.js');
 
 beforeAll(() => {
-  setupDb();
+  return setupDb();
 });
 
 describe('Reviews table', () => {
